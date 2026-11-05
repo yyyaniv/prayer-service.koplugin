@@ -73,7 +73,8 @@ end
 M.fetcher={}
 function M.fetcher:fetch(path,modified)
     local chunks={}
-    local headers={ ["User-Agent"]="molytva.koplugin/1.0.0 (+https://github.com/yyyaniv/prayer-service.koplugin)" }
+    local About=require("molytva_lib.about")
+    local headers={ ["User-Agent"]="molytva.koplugin/"..About.VERSION.." (+"..About.URL..")" }
     if modified then headers["If-Modified-Since"]=modified end
     local request={url="https://prayer-service.pp.ua/"..path,method="GET",
         headers=headers,sink=socketutil.table_sink(chunks)}

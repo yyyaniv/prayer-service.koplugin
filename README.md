@@ -73,6 +73,11 @@ KOReader's `plugins` folder; see the steps above. Works on any device that runs 
 Тести: `bash tests/run.sh` (Lua 5.1, шлях задають `LUA_BIN` / `LUAC_BIN`) і `pytest -q tests`.
 Зібрати ZIP для релізу: `tools/make_release.sh`.
 
+## Автор
+
+Юрій Янів (Yurii Yaniv) — [yurii.yaniv.partner@gmail.com](mailto:yurii.yaniv.partner@gmail.com).
+Помилки й побажання — в [Issues](https://github.com/yyyaniv/prayer-service.koplugin/issues).
+
 ## Ліцензія
 
 Код: [AGPL-3.0-only](LICENSE), як і в KOReader. Ліцензія не поширюється на тексти богослужінь.

@@ -22,6 +22,7 @@ local logger = require("logger")
 local function json_decode(text) return JSON.decode(text) end
 
 local Date = require("molytva_lib.civil_date")
+local About = require("molytva_lib.about")
 local Day = require("molytva_lib.liturgical_day")
 local MonthView = require("molytva_lib.month")
 local Pack = require("molytva_lib.pack")
@@ -713,6 +714,11 @@ function Molytva:showPackInfo(pack)
         details[#details + 1] = "Діапазон: " .. tostring(pack.meta.range["from"])
             .. " — " .. tostring(pack.meta.range["to"])
     end
+    details[#details + 1] = ""
+    details[#details + 1] = "Плагін «Молитва» " .. About.VERSION
+    details[#details + 1] = "Автор: " .. About.AUTHOR
+    details[#details + 1] = "Email: " .. About.EMAIL
+    details[#details + 1] = "Код: " .. (About.URL:gsub("^https://", ""))
     local viewer
     viewer = TextViewer:new{
         title = "Про пакет",

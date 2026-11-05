@@ -3,7 +3,7 @@
 # Usage: tools/make_release.sh [version]   (default: version from molytva_lib/builder.lua)
 set -euo pipefail
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-version="${1:-$(sed -n 's/^local VERSION, SOURCE = "\([^"]*\)".*/\1/p' "${root}/molytva.koplugin/molytva_lib/builder.lua")}"
+version="${1:-$(sed -n 's/^ *VERSION = "\([^"]*\)".*/\1/p' "${root}/molytva.koplugin/molytva_lib/about.lua")}"
 [ -n "${version}" ] || { echo "cannot detect version" >&2; exit 1; }
 out="${root}/dist/molytva.koplugin-${version}.zip"
 mkdir -p "${root}/dist"

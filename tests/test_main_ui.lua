@@ -243,4 +243,14 @@ end
 local log = io.open(data_dir .. "/molytva-screenshots/tour.log"):read("*a")
 assert(not log:find("ERROR", 1, true), "tour step failed:\n" .. log)
 print("ok - screenshot tour covers all screens")
+
+-- «Про пакет» names the plugin, its author and contacts after the pack details.
+local About = require("molytva_lib.about")
+instance():showPackInfo()
+local info = shown[#shown].text
+for _, want in ipairs({ "Ліцензія: ", "Плагін «Молитва» " .. About.VERSION, "Автор: " .. About.AUTHOR,
+        "Email: " .. About.EMAIL, "Код: github.com/yyyaniv/prayer-service.koplugin" }) do
+    assert(info:find(want, 1, true), "about pack misses: " .. want .. "\n" .. info)
+end
+print("ok - about pack shows the author")
 os.execute("rm -rf '" .. data_dir .. "'")

@@ -4,7 +4,7 @@
 local M = {}
 local array_tag = {}
 function M.array(value) return setmetatable(value or {}, array_tag) end
-local VERSION, SOURCE = "1.0.0", "https://prayer-service.pp.ua"
+local VERSION, SOURCE = require("molytva_lib.about").VERSION, "https://prayer-service.pp.ua"
 local LICENSE = "Тексти © «Молитва Церкви» (prayer-service.pp.ua), А. Мартинишин; для особистого некомерційного користування з дозволу автора; комерційне використання заборонено"
 local RANKS = { ["#"]="great", ["*"]="vigil", ["+"]="polyeleos", ["@"]="doxology", ["&"]="sixfold" }
 local SERVICES = { {"u","ustav","Устав"}, {"s","saints","Святі дня"}, {"tv","vespers","Вечірня"}, {"tu","matins","Утреня"}, {"tc","hours","Часи"}, {"tn","compline","Повечір'я"}, {"o","midnight","Опівнічна"}, {"p","word","Слово на день"}, {"l","presanctified","Передшеосвячена"} }

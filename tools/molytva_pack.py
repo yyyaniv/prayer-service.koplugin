@@ -17,7 +17,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 import zipfile
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 SOURCE_URL = "https://prayer-service.pp.ua"
 PROJECT_URL = "https://github.com/yyyaniv/prayer-service.koplugin"
 USER_AGENT = f"molytva-pack/{VERSION} (+{PROJECT_URL})"
