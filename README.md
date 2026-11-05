@@ -36,7 +36,7 @@ PocketBook, Android (зокрема Onyx Boox), reMarkable, Cervantes, Linux і 
    [PocketBook](https://github.com/koreader/koreader/wiki/Installation-on-PocketBook-devices),
    Android ([F-Droid](https://f-droid.org/packages/org.koreader.launcher.fdroid/) або
    [GitHub Releases](https://github.com/koreader/koreader/releases)), інші — на [koreader.rocks](https://koreader.rocks).
-1. Завантажте `molytva.koplugin-<версія>.zip` зі сторінки Releases.
+1. Завантажте `molytva.koplugin-<версія>.zip` з [останнього релізу](https://github.com/yyyaniv/prayer-service.koplugin/releases/latest).
 2. Підключіть пристрій до комп'ютера через USB (на Android можна скопіювати файл будь-яким способом)
    і розпакуйте архів у теку `plugins` KOReader, щоб вийшло `plugins/molytva.koplugin/main.lua`:
    - Kobo: `.adds/koreader/plugins/`
