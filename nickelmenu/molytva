@@ -1,0 +1,7 @@
+# NickelMenu entry for the «Молитва» KOReader plugin (Kobo only).
+# Copy this file to .adds/nm/molytva on the Kobo drive.
+# It leaves a flag for the plugin, then starts KOReader, which opens «Молитва» as a full-screen app
+# (calendar of the month with today's services on top). Closing the app returns to Kobo.
+# The directory argument makes KOReader start in the file browser instead of reopening the last
+# book, so the app appears at once. One command, because cmd_spawn runs in the background.
+menu_item:main:Молитва:cmd_spawn:quiet:touch /mnt/onboard/.adds/koreader/molytva-open-today && exec /mnt/onboard/.adds/koreader/koreader.sh /mnt/onboard

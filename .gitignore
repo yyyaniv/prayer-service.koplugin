@@ -1,0 +1,19 @@
+# Protected texts and generated packs — never commit
+data/
+dist/
+# Private correspondence
+LETTER_*.md
+__pycache__/
+.pytest_cache/
+.venv/
+.DS_Store
+# Local work notes
+TODO.md
+
+# Local developer notes and tools (need the protected texts cache)
+PRAYER_SERVICE_FORMAT.md
+DEVELOPMENT.md
+tools/compare_builders.py
+tools/build_lua.lua
+tools/smoke_updater.py
+tools/smoke_updater.lua
